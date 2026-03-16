@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Estate Solutions, LLC",
+    "slug": "estate-solutions",
+    "url": "https://est8solutions.com/",
+    "score": 5,
+    "website_quality": 2,
+    "review_health": 3,
+    "lead_capture": 0,
+    "mobile_score": 0,
+    "pain_points": [
+      "Site is heavily JavaScript-rendered — content is invisible to crawlers/bots (terrible for SEO)",
+      "No extractable text content on homepage despite HTTP 200 response",
+      "Meta description mentions 24/7 service, IICRC certified, 60-min response, direct insurance billing — but none of this is visible in page body",
+      "Phone number (404-913-3030) only appears in meta tags, not verifiable in page content",
+      "Cannot confirm presence of contact forms, CTAs, or booking tools",
+      "Cannot confirm mobile responsiveness from content extraction",
+      "Restoration/damage niche (water, fire, storm) — not a remodeling company"
+    ],
+    "stars": 4.8,
+    "review_count": 92,
+    "verdict": "Strong Lead",
+    "notes": "Site exists but is poorly built for SEO — JS-only rendering means Google may not index content. 92 reviews at 4.8 stars shows strong business. Restoration niche may differ from remodeling leads but still home services."
+  },
+  {
+    "name": "Ben Hill Renovations",
+    "slug": "ben-hill-renovations",
+    "url": "http://www.bhrenovations.com/",
+    "score": 9,
+    "website_quality": 3,
+    "review_health": 3,
+    "lead_capture": 2,
+    "mobile_score": 2,
+    "pain_points": [
+      "Original URL is HTTP (not HTTPS) — redirects to HTTPS but starting point is insecure",
+      "Very content-heavy homepage could overwhelm visitors",
+      "Testimonials section only shows one review despite 232 Google reviews"
+    ],
+    "stars": 4.8,
+    "review_count": 232,
+    "verdict": "Skip",
+    "notes": "Excellent professional site built on Next.js. Has scheduling/appointment forms with city+service selection, showroom, featured projects gallery, trust badges (TrustDALE), testimonials, phone number prominent. 232 reviews at 4.8 is outstanding. In business since 1964. This company does NOT need our help — their web presence is top-tier. Skip."
+  },
+  {
+    "name": "All Weather Renovations",
+    "slug": "all-weather-renovations",
+    "url": "https://allweatherrenovations.com/",
+    "score": 9,
+    "website_quality": 3,
+    "review_health": 2,
+    "lead_capture": 2,
+    "mobile_score": 2,
+    "pain_points": [
+      "Only 38 reviews — lower count compared to competitors despite quality site",
+      "Homepage is extremely long with SEO-heavy content (may hurt user experience)",
+      "Content reads like it was written primarily for search engines, not humans",
+      "Financing section is overly detailed for a homepage",
+      "Multiple duplicate forms on the same page (3 estimate request forms)"
+    ],
+    "stars": 4.7,
+    "review_count": 38,
+    "verdict": "Skip",
+    "notes": "Very professional WordPress site with strong SEO strategy. Multiple lead capture forms, TrustDALE certified with $10k guarantee, financing options, video content, project gallery, brand partnerships (TimberTech, AZEK, IKO). Based in Douglasville. Only weakness is lower review count (38). Site is comprehensive — they don't need a rebuild."
+  },
+  {
+    "name": "Elite Remodeling",
+    "slug": "elite-remodeling",
+    "url": "https://eliteremodelingllc.com/",
+    "score": 4,
+    "website_quality": 1,
+    "review_health": 3,
+    "lead_capture": 1,
+    "mobile_score": 1,
+    "pain_points": [
+      "Website looks template/AI-generated (ZipWP image in logo path suggests auto-generated site)",
+      "Very minimal content — no detailed service pages visible from homepage",
+      "No trust badges, certifications, or awards displayed",
+      "No project gallery or before/after photos on homepage despite having great review photos",
+      "Logo is a low-quality placeholder image (zipwp-image-7682)",
+      "No financing information despite being a remodeling company",
+      "Missing meta description entirely",
+      "No service area map or detailed coverage info",
+      "Phone number present but no click-to-call optimization visible",
+      "Contact page exists but no inline forms on homepage",
+      "Reviews on the site are embedded Google reviews — no curated testimonial section",
+      "113 reviews at 4.9 stars is EXCELLENT but the website does not reflect this quality",
+      "Massive gap between review quality and website quality — perfect lead candidate"
+    ],
+    "stars": 4.9,
+    "review_count": 113,
+    "verdict": "Strong Lead",
+    "notes": "This is the #1 lead candidate. Elite Remodeling has outstanding reviews (4.9 stars, 113 reviews) with detailed, glowing testimonials about Diego and his team. But their website is clearly auto-generated with ZipWP, uses placeholder assets, lacks a gallery, has no trust signals, and minimal content. The gap between their real reputation and their web presence is enormous. A professional site showcasing their actual work photos from reviews would be transformative. Based in Douglasville — perfect market match."
+  },
+  {
+    "name": "Small Jobs by Shelby Construction",
+    "slug": "small-jobs-shelby",
+    "url": null,
+    "score": 1,
+    "website_quality": 0,
+    "review_health": 0,
+    "lead_capture": 0,
+    "mobile_score": 0,
+    "pain_points": [
+      "No website at all",
+      "No online presence to evaluate",
+      "No review data provided"
+    ],
+    "stars": null,
+    "review_count": null,
+    "verdict": "Build",
+    "notes": "No website. Automatic Build candidate — needs a complete web presence from scratch."
+  }
+]

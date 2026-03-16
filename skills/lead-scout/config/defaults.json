@@ -1,0 +1,7 @@
+{
+  "top_n": 5,
+  "exclude_chains": true,
+  "inactive_threshold_months": 12,
+  "min_reviews_to_consider_active": 1,
+  "auto_build": true
+}

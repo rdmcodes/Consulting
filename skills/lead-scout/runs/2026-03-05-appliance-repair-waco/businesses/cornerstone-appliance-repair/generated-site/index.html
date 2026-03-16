@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cornerstone Appliance Repair & Service | Veteran-Owned in Robinson, TX</title>
+<meta name="description" content="Veteran-owned appliance repair serving Robinson, Waco & Central Texas. 5-star rated. All major household appliances. Call (254) 722-0868 today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;color:#1e293b;line-height:1.6;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;line-height:1.2;color:#0c1f3f}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ===== VARIABLES ===== */
+:root{
+  --navy:#0c1f3f;
+  --navy-light:#162d5a;
+  --gold:#d97706;
+  --gold-light:#f59e0b;
+  --red:#dc2626;
+  --red-dark:#b91c1c;
+  --white:#ffffff;
+  --off-white:#f8fafc;
+  --gray-50:#f9fafb;
+  --gray-100:#f1f5f9;
+  --gray-200:#e2e8f0;
+  --gray-400:#94a3b8;
+  --gray-500:#64748b;
+  --gray-600:#475569;
+  --gray-700:#334155;
+  --gray-800:#1e293b;
+  --shadow-sm:0 1px 3px rgba(12,31,63,.08);
+  --shadow-md:0 4px 16px rgba(12,31,63,.1);
+  --shadow-lg:0 12px 40px rgba(12,31,63,.12);
+  --shadow-xl:0 20px 60px rgba(12,31,63,.15);
+  --radius:12px;
+  --radius-lg:20px;
+}
+
+/* ===== UTILITY ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.01em;cursor:pointer;border:none;transition:all .3s cubic-bezier(.4,0,.2,1);text-align:center;justify-content:center}
+.btn-primary{background:var(--gold);color:var(--white);box-shadow:0 4px 14px rgba(217,119,6,.35)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(217,119,6,.45)}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4)}
+.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
+.btn-navy{background:var(--navy);color:var(--white);box-shadow:0 4px 14px rgba(12,31,63,.3)}
+.btn-navy:hover{background:var(--navy-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(12,31,63,.4)}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--white)}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+
+/* ===== SECTION HEADINGS ===== */
+.section-label{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:12px}
+.section-label::before{content:'';width:24px;height:2px;background:var(--gold);border-radius:2px}
+.section-title{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;margin-bottom:16px}
+.section-subtitle{font-size:1.1rem;color:var(--gray-500);max-width:600px;line-height:1.7}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.fade-up{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up-delay-1{transition-delay:.1s}
+.fade-up-delay-2{transition-delay:.2s}
+.fade-up-delay-3{transition-delay:.3s}
+.fade-up-delay-4{transition-delay:.4s}
+.fade-up-delay-5{transition-delay:.5s}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(12,31,63,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s ease;border-bottom:1px solid rgba(255,255,255,.05)}
+.header.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.header-logo{display:flex;align-items:center;gap:12px}
+.header-logo-icon{width:40px;height:40px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.header-logo-icon svg{width:22px;height:22px;color:var(--white)}
+.header-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.header-logo-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);white-space:nowrap}
+.header-logo-sub{font-size:.7rem;color:var(--gold);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.header-nav{display:none;gap:28px}
+.header-nav a{font-size:.9rem;font-weight:500;color:rgba(255,255,255,.75);transition:color .2s}
+.header-nav a:hover{color:var(--gold)}
+.header-cta{display:none}
+.header-cta .btn{padding:10px 24px;font-size:.9rem}
+.header-phone{display:flex;align-items:center;gap:8px;color:var(--white);font-weight:600;font-size:.95rem}
+.header-phone svg{width:18px;height:18px;color:var(--gold)}
+@media(min-width:768px){
+  .header-nav{display:flex}
+}
+@media(min-width:1024px){
+  .header-cta{display:flex}
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.mobile-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--navy);z-index:999;padding:32px 24px;flex-direction:column;gap:0}
+.mobile-menu.active{display:flex}
+.mobile-menu a{display:block;padding:16px 0;font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:500;color:rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu .btn{margin-top:24px}
+@media(min-width:768px){
+  .mobile-toggle{display:none}
+  .mobile-menu{display:none !important}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;padding-top:80px}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#0c1f3f 0%,#162d5a 50%,#0c1f3f 100%)}
+.hero::after{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 70% 30%,rgba(217,119,6,.06) 0%,transparent 60%)}
+.hero-pattern{position:absolute;inset:0;opacity:.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 50px,rgba(255,255,255,.5) 50px,rgba(255,255,255,.5) 51px),repeating-linear-gradient(90deg,transparent,transparent 50px,rgba(255,255,255,.5) 50px,rgba(255,255,255,.5) 51px)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:48px;padding:60px 0 80px}
+.hero-content{max-width:640px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);border-radius:50px;padding:6px 16px 6px 8px;margin-bottom:24px}
+.hero-badge-icon{width:28px;height:28px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hero-badge-icon svg{width:14px;height:14px;color:var(--white)}
+.hero-badge-text{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.9)}
+.hero h1{font-size:clamp(2rem,5.5vw,3.5rem);font-weight:800;color:var(--white);margin-bottom:20px;line-height:1.1}
+.hero h1 span{color:var(--gold)}
+.hero-subtitle{font-size:1.15rem;color:rgba(255,255,255,.65);margin-bottom:12px;line-height:1.7;max-width:520px}
+.hero-rating{display:inline-flex;align-items:center;gap:8px;margin-bottom:32px}
+.hero-rating-stars{display:flex;gap:2px}
+.hero-rating-stars svg{width:20px;height:20px;color:var(--gold)}
+.hero-rating-text{font-size:.9rem;color:rgba(255,255,255,.7);font-weight:500}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-actions .btn{min-width:180px}
+.hero-visual{display:none;position:relative}
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:32px;color:var(--white)}
+.hero-card-row{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.hero-card-row:last-child{border-bottom:none;padding-bottom:0}
+.hero-card-row:first-child{padding-top:0}
+.hero-card-icon{width:48px;height:48px;background:rgba(217,119,6,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-card-icon svg{width:24px;height:24px;color:var(--gold)}
+.hero-card-label{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:2px}
+.hero-card-value{font-family:'Outfit',sans-serif;font-weight:600;font-size:1.05rem}
+@media(min-width:768px){
+  .hero-inner{padding:80px 0 100px}
+}
+@media(min-width:1024px){
+  .hero-inner{grid-template-columns:1fr 420px;align-items:center}
+  .hero-visual{display:block}
+}
+
+/* ===== TRUST BAR ===== */
+.trust-bar{background:var(--white);border-bottom:1px solid var(--gray-200);padding:0;position:relative;z-index:5}
+.trust-bar-inner{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.trust-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px 16px;border-right:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100);gap:8px}
+.trust-item:nth-child(2n){border-right:none}
+.trust-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.trust-icon svg{width:22px;height:22px;color:var(--gold)}
+.trust-icon.gold{background:linear-gradient(135deg,var(--gold),#b45309)}
+.trust-icon.gold svg{color:var(--white)}
+.trust-icon.red{background:linear-gradient(135deg,var(--red),var(--red-dark))}
+.trust-icon.red svg{color:var(--white)}
+.trust-label{font-family:'Outfit',sans-serif;font-weight:700;font-size:.85rem;color:var(--navy)}
+.trust-sub{font-size:.75rem;color:var(--gray-500)}
+@media(min-width:640px){
+  .trust-bar-inner{grid-template-columns:repeat(3,1fr)}
+  .trust-item:nth-child(2n){border-right:1px solid var(--gray-100)}
+  .trust-item:nth-child(3n){border-right:none}
+}
+@media(min-width:900px){
+  .trust-bar-inner{grid-template-columns:repeat(5,1fr)}
+  .trust-item{border-bottom:none}
+  .trust-item:nth-child(3n){border-right:1px solid var(--gray-100)}
+  .trust-item:last-child{border-right:none}
+}
+
+/* ===== SERVICES ===== */
+.services{padding:80px 0;background:var(--off-white)}
+.services-header{text-align:center;margin-bottom:56px}
+.services-header .section-subtitle{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:28px 20px;text-align:center;border:1px solid var(--gray-100);transition:all .35s cubic-bezier(.4,0,.2,1);cursor:default}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(12,31,63,.04),rgba(12,31,63,.08));border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.service-icon svg{width:28px;height:28px;color:var(--navy)}
+.service-card:hover .service-icon{background:linear-gradient(135deg,var(--gold),#b45309)}
+.service-card:hover .service-icon svg{color:var(--white)}
+.service-card h3{font-size:.95rem;font-weight:700;margin-bottom:4px}
+.service-card p{font-size:.8rem;color:var(--gray-500);line-height:1.5}
+@media(min-width:640px){
+  .services-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .service-card{padding:32px 24px}
+}
+@media(min-width:900px){
+  .services-grid{grid-template-columns:repeat(4,1fr);gap:24px}
+}
+
+/* ===== OUR STORY ===== */
+.story{padding:80px 0;background:var(--white)}
+.story-inner{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+.story-visual{position:relative}
+.story-image{background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:var(--radius-lg);padding:48px 32px;color:var(--white);text-align:center;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.story-image::before{content:'';position:absolute;bottom:-20px;right:-20px;width:180px;height:180px;background:rgba(217,119,6,.08);border-radius:50%}
+.story-flag{width:80px;height:80px;margin-bottom:24px;opacity:.9}
+.story-flag svg{width:80px;height:80px}
+.story-image h3{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:8px;position:relative}
+.story-image p{color:rgba(255,255,255,.65);font-size:.95rem;position:relative}
+.story-content .section-title{max-width:500px}
+.story-text{color:var(--gray-600);margin-bottom:24px;line-height:1.8;font-size:1.02rem}
+.story-values{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.story-value{display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--gray-50);border-radius:50px;font-size:.85rem;font-weight:600;color:var(--navy)}
+.story-value svg{width:18px;height:18px;color:var(--gold)}
+@media(min-width:900px){
+  .story-inner{grid-template-columns:1fr 1fr}
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why{padding:80px 0;background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(217,119,6,.06),transparent 70%);border-radius:50%}
+.why-header{text-align:center;margin-bottom:56px}
+.why-header .section-label{color:var(--gold)}
+.why-header .section-title{color:var(--white)}
+.why-header .section-subtitle{color:rgba(255,255,255,.55);margin:0 auto}
+.why-grid{display:grid;grid-template-columns:1fr;gap:20px;position:relative;z-index:1}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:32px 28px;transition:all .35s}
+.why-card:hover{background:rgba(255,255,255,.07);border-color:rgba(217,119,6,.3);transform:translateY(-2px)}
+.why-card-icon{width:48px;height:48px;background:rgba(217,119,6,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-card-icon svg{width:24px;height:24px;color:var(--gold)}
+.why-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:var(--white)}
+.why-card p{color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.7}
+@media(min-width:640px){
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ===== REVIEWS ===== */
+.reviews{padding:80px 0;background:var(--off-white)}
+.reviews-header{text-align:center;margin-bottom:56px}
+.reviews-header .section-subtitle{margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.review-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);transition:all .35s}
+.review-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.review-stars{display:flex;gap:2px;margin-bottom:16px}
+.review-stars svg{width:18px;height:18px;color:var(--gold)}
+.review-text{font-size:1.02rem;color:var(--gray-700);line-height:1.8;margin-bottom:20px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--white)}
+.review-avatar.a1{background:var(--navy)}
+.review-avatar.a2{background:var(--gold)}
+.review-avatar.a3{background:var(--red)}
+.review-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy)}
+.review-meta{font-size:.8rem;color:var(--gray-400)}
+@media(min-width:768px){
+  .reviews-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ===== SERVICE AREA ===== */
+.area{padding:80px 0;background:var(--white)}
+.area-inner{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+.area-map{background:var(--gray-50);border-radius:var(--radius-lg);padding:48px;position:relative;display:flex;align-items:center;justify-content:center;min-height:300px;border:1px solid var(--gray-100)}
+.area-map-pin{text-align:center}
+.area-map-pin svg{width:64px;height:64px;color:var(--red);margin-bottom:16px}
+.area-map-pin p{font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);font-size:1.1rem}
+.area-map-pin span{font-size:.85rem;color:var(--gray-500)}
+.area-cities{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
+.area-city{display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--gray-50);border-radius:var(--radius);border:1px solid var(--gray-100);transition:all .25s}
+.area-city:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.area-city:hover svg{color:var(--gold)}
+.area-city svg{width:18px;height:18px;color:var(--navy);flex-shrink:0;transition:color .25s}
+.area-city span{font-weight:600;font-size:.9rem}
+@media(min-width:640px){
+  .area-cities{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+  .area-inner{grid-template-columns:1fr 1fr}
+}
+
+/* ===== CONTACT ===== */
+.contact{padding:80px 0;background:var(--off-white)}
+.contact-inner{display:grid;grid-template-columns:1fr;gap:48px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-row{display:flex;align-items:flex-start;gap:16px}
+.contact-row-icon{width:48px;height:48px;background:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-row-icon svg{width:22px;height:22px;color:var(--gold)}
+.contact-row h4{font-size:1rem;font-weight:700;margin-bottom:4px}
+.contact-row p,.contact-row a{font-size:.95rem;color:var(--gray-500)}
+.contact-row a:hover{color:var(--gold)}
+.contact-form{background:var(--white);border-radius:var(--radius-lg);padding:36px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm)}
+.contact-form h3{font-size:1.35rem;margin-bottom:4px}
+.contact-form .form-sub{color:var(--gray-500);font-size:.9rem;margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--gray-800);background:var(--white);transition:border-color .2s;outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{width:100%;padding:16px;font-size:1.05rem}
+@media(min-width:900px){
+  .contact-inner{grid-template-columns:1fr 1fr}
+}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 0 24px}
+.footer-top{display:grid;grid-template-columns:1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-brand{display:flex;flex-direction:column;gap:16px}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-logo-icon{width:36px;height:36px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.footer-logo-icon svg{width:20px;height:20px;color:var(--white)}
+.footer-logo-text{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--white)}
+.footer-desc{font-size:.9rem;line-height:1.7;max-width:320px}
+.footer-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.25);border-radius:50px;padding:6px 14px;margin-top:4px}
+.footer-badge svg{width:16px;height:16px;color:var(--red)}
+.footer-badge span{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.05em}
+.footer-links h4{font-family:'Outfit',sans-serif;font-weight:700;color:var(--white);margin-bottom:16px;font-size:.95rem}
+.footer-links a{display:block;font-size:.9rem;padding:4px 0;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:24px;font-size:.8rem}
+@media(min-width:768px){
+  .footer-top{grid-template-columns:1.5fr 1fr 1fr}
+}
+
+/* ===== MOBILE CTA BAR ===== */
+.mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--navy);padding:12px 16px;gap:10px;border-top:2px solid var(--gold);box-shadow:0 -4px 20px rgba(0,0,0,.3)}
+.mobile-cta .btn{flex:1;padding:14px 16px;font-size:.95rem;text-align:center;justify-content:center}
+@media(min-width:768px){
+  .mobile-cta{display:none}
+}
+
+/* ===== EXTRA SPACING MOBILE ===== */
+@media(max-width:767px){
+  .footer{padding-bottom:80px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="header-logo">
+        <div class="header-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg>
+        </div>
+        <div class="header-logo-text">
+          <span class="header-logo-name">Cornerstone Appliance</span>
+          <span class="header-logo-sub">Repair &amp; Service</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="#services">Services</a>
+        <a href="#story">Our Story</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#area">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+12547220868" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          (254) 722-0868
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#story" onclick="closeMenu()">Our Story</a>
+  <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#area" onclick="closeMenu()">Service Areas</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:+12547220868" class="btn btn-primary" style="margin-top:24px">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+    Call (254) 722-0868
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-pattern"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge fade-up">
+          <div class="hero-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+          </div>
+          <span class="hero-badge-text">Veteran-Owned &amp; Operated</span>
+        </div>
+        <h1 class="fade-up">Quality Repairs, Right Around <span>the Corner</span></h1>
+        <p class="hero-subtitle fade-up fade-up-delay-1">Veteran-owned appliance repair you can count on. Serving Robinson, Waco, and all of Central Texas with the precision and integrity you deserve.</p>
+        <div class="hero-rating fade-up fade-up-delay-2">
+          <div class="hero-rating-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          </div>
+          <span class="hero-rating-text">5.0 Perfect Rating on Yelp</span>
+        </div>
+        <div class="hero-actions fade-up fade-up-delay-3">
+          <a href="tel:+12547220868" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            Call Now
+          </a>
+          <a href="#contact" class="btn btn-secondary">Request Service</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-row">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-label">Specialty</div>
+              <div class="hero-card-value">All Major Appliances</div>
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-label">Based in</div>
+              <div class="hero-card-value">Robinson, TX</div>
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-label">Hours</div>
+              <div class="hero-card-value">Mon-Fri 8am - 5pm</div>
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-label">Customer Rating</div>
+              <div class="hero-card-value">5.0 / 5.0 Perfect</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item fade-up">
+        <div class="trust-icon gold">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+        </div>
+        <span class="trust-label">5.0 Stars</span>
+        <span class="trust-sub">Perfect Rating</span>
+      </div>
+      <div class="trust-item fade-up fade-up-delay-1">
+        <div class="trust-icon red">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"/></svg>
+        </div>
+        <span class="trust-label">Veteran Owned</span>
+        <span class="trust-sub">Proudly Serving</span>
+      </div>
+      <div class="trust-item fade-up fade-up-delay-2">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+        </div>
+        <span class="trust-label">Family Owned</span>
+        <span class="trust-sub">Local Values</span>
+      </div>
+      <div class="trust-item fade-up fade-up-delay-3">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+        </div>
+        <span class="trust-label">Locally Owned</span>
+        <span class="trust-sub">Central Texas</span>
+      </div>
+      <div class="trust-item fade-up fade-up-delay-4">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+        </div>
+        <span class="trust-label">Robinson, TX</span>
+        <span class="trust-sub">Waco Metro Area</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header fade-up">
+      <div class="section-label">What We Fix</div>
+      <h2 class="section-title">All Major Household Appliances</h2>
+      <p class="section-subtitle">From quick fixes to complex repairs, we service every major brand and appliance in your home with precision and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="2" width="18" height="20" rx="2" stroke="currentColor" fill="none"/><line x1="3" y1="14" x2="21" y2="14" stroke="currentColor"/><circle cx="12" cy="8" r="3" stroke="currentColor" fill="none"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Washers</h3>
+        <p>Top &amp; front load repair</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-1">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="2" width="18" height="20" rx="2" stroke="currentColor" fill="none"/><line x1="3" y1="14" x2="21" y2="14" stroke="currentColor"/><path d="M8 7h8M8 10h5" stroke="currentColor" stroke-linecap="round"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Dryers</h3>
+        <p>Gas &amp; electric models</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-2">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" fill="none"/><line x1="2" y1="9" x2="22" y2="9" stroke="currentColor"/><line x1="12" y1="9" x2="12" y2="22" stroke="currentColor"/><circle cx="7" cy="5.5" r="1.5" stroke="currentColor" fill="none"/><circle cx="17" cy="5.5" r="1.5" stroke="currentColor" fill="none"/></svg>
+        </div>
+        <h3>Refrigerators</h3>
+        <p>All styles &amp; brands</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-3">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" fill="none"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor"/><circle cx="6" cy="8" r="1.5" stroke="currentColor" fill="none"/><circle cx="12" cy="8" r="1.5" stroke="currentColor" fill="none"/><circle cx="18" cy="8" r="1.5" stroke="currentColor" fill="none"/><circle cx="6" cy="16" r="1.5" stroke="currentColor" fill="none"/><circle cx="12" cy="16" r="1.5" stroke="currentColor" fill="none"/></svg>
+        </div>
+        <h3>Ovens &amp; Ranges</h3>
+        <p>Gas, electric &amp; dual-fuel</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" fill="none"/><line x1="3" y1="11" x2="21" y2="11" stroke="currentColor"/><path d="M8 20h8" stroke="currentColor" stroke-linecap="round"/><path d="M12 18v2" stroke="currentColor" stroke-linecap="round"/><circle cx="16" cy="7.5" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Dishwashers</h3>
+        <p>Built-in &amp; portable</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-1">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="4" y="3" width="16" height="8" rx="1" stroke="currentColor" fill="none"/><path d="M7 6h4" stroke="currentColor" stroke-linecap="round"/><circle cx="16" cy="6" r="1" fill="currentColor"/><path d="M2 14h20M6 11v3M18 11v3M4 14v5a2 2 0 002 2h12a2 2 0 002-2v-5" stroke="currentColor" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Microwaves</h3>
+        <p>Countertop &amp; built-in</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-2">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" fill="none"/><path d="M3 9h18" stroke="currentColor"/><path d="M3 15h18" stroke="currentColor"/><path d="M9 3v18" stroke="currentColor"/><path d="M15 3v18" stroke="currentColor"/></svg>
+        </div>
+        <h3>Freezers</h3>
+        <p>Chest &amp; upright units</p>
+      </div>
+      <div class="service-card fade-up fade-up-delay-3">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 5.287A1.38 1.38 0 0119.867 22H4.133a1.38 1.38 0 01-1.335-1.413L4.2 15.3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Garbage Disposals</h3>
+        <p>Install &amp; repair</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-inner">
+      <div class="story-visual fade-up">
+        <div class="story-image">
+          <div class="story-flag">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="40" cy="40" r="38" stroke="rgba(255,255,255,.15)" stroke-width="2" fill="none"/>
+              <g transform="translate(20,22)">
+                <rect x="0" y="0" width="40" height="28" rx="2" fill="#0c1f3f" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+                <rect x="0" y="0" width="16" height="15" fill="#0c1f3f"/>
+                <g fill="#d97706">
+                  <circle cx="4" cy="3" r="0.8"/><circle cx="8" cy="3" r="0.8"/><circle cx="12" cy="3" r="0.8"/>
+                  <circle cx="4" cy="6" r="0.8"/><circle cx="8" cy="6" r="0.8"/><circle cx="12" cy="6" r="0.8"/>
+                  <circle cx="4" cy="9" r="0.8"/><circle cx="8" cy="9" r="0.8"/><circle cx="12" cy="9" r="0.8"/>
+                  <circle cx="4" cy="12" r="0.8"/><circle cx="8" cy="12" r="0.8"/><circle cx="12" cy="12" r="0.8"/>
+                </g>
+                <rect x="16" y="0" width="24" height="4" fill="#dc2626" opacity=".7"/>
+                <rect x="16" y="7" width="24" height="4" fill="#dc2626" opacity=".7"/>
+                <rect x="0" y="17.5" width="40" height="3.5" fill="#dc2626" opacity=".7"/>
+                <rect x="0" y="24.5" width="40" height="3.5" fill="#dc2626" opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Founded on Service.</h3>
+          <h3>Committed to Excellence.</h3>
+          <p style="margin-top:16px">Robinson, TX &mdash; Serving Since Day One</p>
+        </div>
+      </div>
+      <div class="story-content">
+        <div class="section-label fade-up">Our Story</div>
+        <h2 class="section-title fade-up">From Military Service to Serving Our Community</h2>
+        <p class="story-text fade-up fade-up-delay-1">Cornerstone Appliance Repair &amp; Service was built on the same values that carried us through military service: discipline, integrity, and an unwavering commitment to getting the job done right.</p>
+        <p class="story-text fade-up fade-up-delay-2">As a veteran-owned and family-operated business in Robinson, Texas, we bring the precision and work ethic of the armed forces to every repair call. When your appliance breaks down, you need someone you can trust to show up on time, diagnose the problem honestly, and fix it right the first time. That is exactly what we do.</p>
+        <p class="story-text fade-up fade-up-delay-3">We are your neighbors. We raise our families here, shop at the same stores, and care about this community just as much as you do. When you call Cornerstone, you are not just getting a repair technician &mdash; you are getting a neighbor who takes pride in their work.</p>
+        <div class="story-values fade-up fade-up-delay-4">
+          <div class="story-value">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            Honor
+          </div>
+          <div class="story-value">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            Integrity
+          </div>
+          <div class="story-value">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            Discipline
+          </div>
+          <div class="story-value">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+            Community
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="why-header">
+      <div class="section-label fade-up">Why Choose Us</div>
+      <h2 class="section-title fade-up">Military Discipline Meets<br>Exceptional Customer Service</h2>
+      <p class="section-subtitle fade-up fade-up-delay-1">We do not cut corners &mdash; we repair them. Here is what sets Cornerstone apart from the rest.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+        </div>
+        <h3>Quality Workmanship</h3>
+        <p>Military training taught us that "good enough" is never good enough. We diagnose thoroughly and repair with precision so your appliance runs like new &mdash; not just until the warranty expires.</p>
+      </div>
+      <div class="why-card fade-up fade-up-delay-1">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>No hidden fees. No surprise charges. We tell you exactly what the repair costs before we start, and we will never recommend work you do not need. Our word is our bond.</p>
+      </div>
+      <div class="why-card fade-up fade-up-delay-2">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Punctual &amp; Reliable</h3>
+        <p>In the military, being on time means being early. When we say we will be there, we will be there. Your time is valuable, and we respect it the same way we respect our service commitment.</p>
+      </div>
+      <div class="why-card fade-up fade-up-delay-3">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+        </div>
+        <h3>Your Neighbors Trust Us</h3>
+        <p>We live right here in Robinson. Our 5.0 perfect rating is not a marketing gimmick &mdash; it is what happens when you treat every home like your own and every customer like family.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="section-label fade-up">Customer Reviews</div>
+      <h2 class="section-title fade-up">What Our Neighbors Are Saying</h2>
+      <p class="section-subtitle fade-up fade-up-delay-1">Proudly maintaining a 5.0 perfect rating. Here is why our customers keep coming back.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+        </div>
+        <p class="review-text">"Called them for my fridge that quit cooling. The technician was right on time, explained everything clearly, and had it running perfectly within the hour. You can tell this is a veteran-run operation &mdash; disciplined, respectful, and no-nonsense. Best repair experience I have ever had."</p>
+        <div class="review-author">
+          <div class="review-avatar a1">MJ</div>
+          <div>
+            <div class="review-name">Michael J.</div>
+            <div class="review-meta">Robinson, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up fade-up-delay-1">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+        </div>
+        <p class="review-text">"I love supporting veteran-owned businesses, and Cornerstone made it easy. They fixed our washing machine the same day we called. Honest about pricing, professional, and genuinely kind. They treat your home like their own. Cannot recommend them enough to the Waco community."</p>
+        <div class="review-author">
+          <div class="review-avatar a2">ST</div>
+          <div>
+            <div class="review-name">Sarah T.</div>
+            <div class="review-meta">Waco, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up fade-up-delay-2">
+        <div class="review-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"/></svg>
+        </div>
+        <p class="review-text">"Our dryer stopped heating right before a holiday weekend. Cornerstone came out first thing Monday and fixed it fast. The owner is a veteran and it shows in everything &mdash; the punctuality, the clean workspace, the follow-up call to make sure everything was still working. Five stars is not enough."</p>
+        <div class="review-author">
+          <div class="review-avatar a3">DP</div>
+          <div>
+            <div class="review-name">David P.</div>
+            <div class="review-meta">Hewitt, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="container">
+    <div class="area-inner">
+      <div class="fade-up">
+        <div class="section-label">Service Area</div>
+        <h2 class="section-title">Proudly Serving the Waco Metro Area</h2>
+        <p class="section-subtitle" style="margin-bottom:8px">Based in Robinson, TX, we provide fast, reliable appliance repair throughout Central Texas. If you are nearby, we have got you covered.</p>
+        <div class="area-cities">
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Robinson</span>
+          </div>
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Waco</span>
+          </div>
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Hewitt</span>
+          </div>
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Woodway</span>
+          </div>
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Bellmead</span>
+          </div>
+          <div class="area-city">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            <span>Lorena</span>
+          </div>
+        </div>
+      </div>
+      <div class="area-map fade-up fade-up-delay-1">
+        <div class="area-map-pin">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"/></svg>
+          <p>Robinson, TX</p>
+          <span>Serving all of Central Texas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="fade-up">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to Get Your Appliance Fixed?</h2>
+        <p class="section-subtitle" style="margin-bottom:36px">Give us a call or fill out the form. We will get back to you promptly &mdash; that is the Cornerstone promise.</p>
+        <div class="contact-info">
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+12547220868">(254) 722-0868</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday &ndash; Friday: 8:00 AM &ndash; 5:00 PM</p>
+              <p>Saturday &ndash; Sunday: Closed</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Robinson, TX &mdash; Serving the Waco Metro Area</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
+            </div>
+            <div>
+              <h4>Payment Methods</h4>
+              <p>Cash, Apple Pay, Android Pay &amp; more</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form fade-up fade-up-delay-1">
+        <h3>Request Service</h3>
+        <p class="form-sub">Fill out the form and we will call you back to schedule.</p>
+        <form id="serviceForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(254) 555-1234" required>
+          </div>
+          <div class="form-group">
+            <label for="appliance">Appliance Type</label>
+            <select id="appliance" name="appliance" required>
+              <option value="" disabled selected>Select an appliance</option>
+              <option>Refrigerator</option>
+              <option>Washer</option>
+              <option>Dryer</option>
+              <option>Oven / Range</option>
+              <option>Dishwasher</option>
+              <option>Microwave</option>
+              <option>Freezer</option>
+              <option>Garbage Disposal</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">What is the issue?</label>
+            <textarea id="message" name="message" placeholder="Briefly describe what's going on with your appliance..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg>
+          </div>
+          <span class="footer-logo-text">Cornerstone Appliance Repair &amp; Service</span>
+        </div>
+        <p class="footer-desc">Quality repairs, right around the corner. Veteran-owned and family-operated in Robinson, TX, proudly serving the Waco metro area.</p>
+        <div class="footer-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"/></svg>
+          <span>Veteran-Owned Business</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#story">Our Story</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#services">Washer Repair</a>
+        <a href="#services">Dryer Repair</a>
+        <a href="#services">Refrigerator Repair</a>
+        <a href="#services">Oven &amp; Range Repair</a>
+        <a href="#services">Dishwasher Repair</a>
+        <a href="#services">All Appliances</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Cornerstone Appliance Repair &amp; Service. All rights reserved.</span>
+      <span>Robinson, TX &bull; (254) 722-0868</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE CTA BAR -->
+<div class="mobile-cta">
+  <a href="tel:+12547220868" class="btn btn-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+    Call Now
+  </a>
+  <a href="#contact" class="btn btn-navy">Request Service</a>
+</div>
+
+<script>
+// Mobile menu toggle
+var toggle = document.getElementById('mobileToggle');
+var menu = document.getElementById('mobileMenu');
+toggle.addEventListener('click', function() {
+  toggle.classList.toggle('active');
+  menu.classList.toggle('active');
+  document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+});
+function closeMenu() {
+  toggle.classList.remove('active');
+  menu.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Header scroll effect
+var header = document.getElementById('header');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 40) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Scroll-triggered animations
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+
+// Form handler
+var serviceForm = document.getElementById('serviceForm');
+serviceForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submitBtn');
+  btn.textContent = 'Request Sent!';
+  btn.style.background = '#16a34a';
+  btn.disabled = true;
+  setTimeout(function() {
+    btn.textContent = 'Submit Request';
+    btn.style.background = '';
+    btn.disabled = false;
+    serviceForm.reset();
+  }, 3000);
+});
+</script>
+</body>
+</html>

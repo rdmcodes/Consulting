@@ -1,0 +1,41 @@
+{
+    "customer_persona": {
+        "primary_customer": "homeowners",
+        "customer_cares_about": [
+            "security",
+            "convenience",
+            "modern living",
+            "luxury home automation"
+        ],
+        "all_services": [
+            "Smart Home Integration",
+            "Home Theater",
+            "Surveillance"
+        ],
+        "service_photo_needs": {
+            "Smart Home Integration": "sleek smart home control panel on a stark wall",
+            "Home Theater": "dark, high-end private home theater with massive screen",
+            "Surveillance": "modern security camera integrated seamlessly into a beautiful exterior"
+        },
+        "imagery_perspective": "Show the sleek, high-end, finished result. Very modern, dark mode, high luxury."
+    },
+    "logo_url": "https://logo.clearbit.com/placeholder-smarthomeatl.com",
+    "logo_source": "placeholder",
+    "brand_colors": {
+        "primary": "#000000",
+        "secondary": "#111111",
+        "accent": "#0ea5e9"
+    },
+    "testimonials": [],
+    "services": [
+        "Smart Home Integration",
+        "Home Theater",
+        "Surveillance"
+    ],
+    "pages_found": 0,
+    "pages_crawled": [],
+    "has_blog": false,
+    "has_gallery": false,
+    "has_contact_form": false,
+    "vast_space_mode": true
+}

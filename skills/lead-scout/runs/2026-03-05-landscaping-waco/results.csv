@@ -1,0 +1,11 @@
+name,address,phone,website,google_maps_url,rating,review_count,category,found_on,score,website_quality,review_health,lead_capture,mobile_score,pain_points,verdict
+"Geoffrey's Quality Lawn Care",,"(254) 203-9280",,,0,0,Landscaping,Google,1,0,0,0,0,No website — dead domain;Zero digital footprint;No reviews,BUILD
+"Maldonado's Landscaping Lawn & Tree",,,maldonadoslandscapinglawnandtree.com,,4.2,5,Landscaping,Google,1,0,1,0,0,Domain expired and hijacked by scam page;Customers calling a stranger's number,BUILD
+ARC Landscaping,,,,arclandscapingservices.com,5.0,9,Landscaping,Google,2,1,1,0,0,Ancient HTML page;No contact form;Unclaimed Google listing;Not responsive,BUILD
+"Luna's Lawn Service & Landscaping",,,,lunalawnservice.com,5.0,1,Landscaping,Google,3,1,1,1,1,Dated Wix site;Only 1 review despite 20+ years;No contact form;No booking,BUILD
+"JB Landscapes & Lawn Care",,,,jb-landscapes-and-lawn-care.ueniweb.com,2.5,11,Landscaping,Google,3,1,0,1,1,Free UENI template on subdomain;2.5 star reviews;Most recent reviews from 2021,BUILD
+"R and R Landscaping",,,,rrlandscapingwaco.com,5.0,1,Landscaping,Google,4,2,0,2,1,Copyright 2020 — 6 years stale;COVID sanitizing still in nav;Template artifacts;Unclaimed listing,Strong Lead
+"GMaya Tree Service & Landscaping",,,,gmayatreesservicesandlandscapingllc.com,5.0,77,Landscaping,Google,5,2,2,1,1,Grammar errors;Image-based testimonials;No booking;Absurdly long domain,Strong Lead
+"Ortega's Lawn & Landscaping",,,,ortegaslawn.com,4.5,43,Landscaping,Google,5,2,2,1,2,Dated WordPress theme;No booking;Stock-photo heavy,Strong Lead
+"Jason's Lawn Care & Landscaping",,,,jasonslawncarewaco.com,4.5,79,Landscaping,Google,6,3,2,2,2,Already paying Hibu;Placeholder stock images;Lorem ipsum text still visible,Maybe
+Legacy Landscapes,,,,wacolandscapingservices.com,4.8,62,Landscaping,Google,8,3,3,2,2,Already professional site;Strong reviews;Financing integration,Skip

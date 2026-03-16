@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx netlify-cli --version)",
+      "Bash(npx --yes netlify-cli deploy --dir=\"c:/Users/smoor/OneDrive/Desktop/PRESSUREWASHIGN/generated-sites/waco-home-pros\" --prod --site=\"\" --message=\"Waco Home Pros landing page\")",
+      "Bash(npx --yes netlify-cli deploy --dir=\"c:/Users/smoor/OneDrive/Desktop/PRESSUREWASHIGN/generated-sites/waco-home-pros\" --prod --message=\"Waco Home Pros landing page\" --site-name=\"waco-home-pros-demo\")",
+      "Bash(npx --yes netlify-cli sites:create --name=\"waco-home-pros-demo\")",
+      "Read(//c/Users/smoor/.netlify/**)",
+      "Read(//c/Users/smoor/AppData/Roaming/netlify/Config/**)",
+      "Bash(NETLIFY_TOKEN=\"nfc_xDUqSE1N3fBMGipcDFrGfDkGcRbYPUu496ba\")",
+      "Bash(curl -s -X POST \"https://api.netlify.com/api/v1/sites\" -H \"Authorization: Bearer $NETLIFY_TOKEN\" -H \"Content-Type: application/json\" -d '{\"\"name\"\": \"\"waco-home-pros-demo\"\"}')",
+      "Bash(python -c \":*)",
+      "Bash(SITE_ID=\"5ad801cf-e785-4961-ac76-e735667ca58f\")",
+      "Bash(curl -s -X POST \"https://api.netlify.com/api/v1/sites/$SITE_ID/deploys\" -H \"Authorization: Bearer $NETLIFY_TOKEN\" -H \"Content-Type: application/zip\" --data-binary \"@c:/Users/smoor/OneDrive/Desktop/PRESSUREWASHIGN/generated-sites/waco-home-pros/deploy.zip\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''Deploy ID: {d.get\\(\"\"id\"\"\\)}\\\\nState: {d.get\\(\"\"state\"\"\\)}\\\\nSSL URL: {d.get\\(\"\"ssl_url\"\"\\)}\\\\nDeploy URL: {d.get\\(\"\"deploy_ssl_url\"\"\\) or d.get\\(\"\"url\"\"\\)}''\\)\")",
+      "WebFetch(domain:waco-home-pros-demo.netlify.app)",
+      "Bash(npx playwright screenshot --full-page --viewport-size=\"1440,900\" \"https://waco-home-pros-demo.netlify.app\" \"c:/Users/smoor/OneDrive/Desktop/PRESSUREWASHIGN/generated-sites/waco-home-pros/live-check.png\")",
+      "Bash(NETLIFY_AUTH_TOKEN=\"nfc_xDUqSE1N3fBMGipcDFrGfDkGcRbYPUu496ba\" npx --yes netlify-cli deploy --dir=\"c:/Users/smoor/OneDrive/Desktop/PRESSUREWASHIGN/generated-sites/waco-home-pros\" --prod --site=\"5ad801cf-e785-4961-ac76-e735667ca58f\" --message=\"Waco Home Pros landing page\")",
+      "Read(//c/Users/smoor/.claude/skills/**)"
+    ]
+  }
+}

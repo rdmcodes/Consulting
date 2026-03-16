@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG Smart Homes | Next Generation Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Essential Vast Space Scroll Classes */
+        .observer-target {
+            opacity: 0.05;
+            will-change: opacity, transform, filter;
+        }
+
+        .blurReveal {
+            filter: blur(10px);
+            transform: translateY(20px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .blurReveal.is-visible {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .slideUp {
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slideUp.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger Delays */
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Subtle Glow Overlay */
+        .glow-overlay::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter">TCG<span class="text-cyan-400">.</span></div>
+            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-semibold text-gray-400">
+                <a href="#systems" class="hover:text-white transition-colors">Systems</a>
+                <a href="#about" class="hover:text-white transition-colors">Engineering</a>
+                <a href="#contact" class="text-white">Initiate</a>
+            </div>
+            <a href="tel:6785459205"
+                class="px-6 py-2 border border-white/20 hover:bg-white hover:text-black transition-all text-sm uppercase tracking-widest font-bold">
+                (678) 545-9205
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Vast Space Aesthetic) -->
+    <section class="relative min-h-screen flex flex-col justify-end pb-32 px-6 overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit=crop"
+                alt="Smart Home Interface"
+                class="object-cover w-full h-full opacity-40 mix-blend-screen scale-105 transform origin-bottom transition-transform duration-[20s] ease-out hover:scale-100">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] to-transparent w-1/2"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto w-full pt-48">
+            <p class="text-cyan-400 font-mono text-sm tracking-[0.2em] uppercase mb-6 observer-target blurReveal">
+                Douglasville, GA</p>
+            <h1
+                class="text-white text-6xl md:text-[7rem] lg:text-[9rem] font-bold tracking-tighter leading-[0.85] mb-10 observer-target blurReveal delay-100">
+                COMMAND<br>
+                <span class="text-gray-500">CONTROL.</span>
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 observer-target slideUp delay-200">
+                <p class="text-gray-400 text-xl font-light leading-relaxed max-w-md">
+                    We engineer military-grade automation for luxury residential estates. Seamless, invisible, and
+                    absolute control.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 md:justify-end items-end">
+                    <a href="#contact"
+                        class="w-full sm:w-auto px-10 py-5 bg-white text-black text-sm uppercase tracking-widest font-bold hover:bg-gray-200 transition-colors text-center">
+                        Request Blueprint
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Grid -->
+    <section id="systems" class="py-32 px-6 relative glow-overlay">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-20 observer-target blurReveal">
+                SYSTEM<br>ARCHITECTURE</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                <!-- System 1 -->
+                <div
+                    class="glass-panel p-10 h-[400px] flex flex-col justify-between group hover:bg-white/5 transition-all duration-500 observer-target slideUp">
+                    <div class="text-cyan-400 font-mono text-xs tracking-widest">01 // AUTOMATION</div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold tracking-tight mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+                            Central<br>Nervous System</h3>
+                        <p class="text-gray-400 font-light text-sm">Lighting, climate, and shades reacting to your exact
+                            preferences before you even ask.</p>
+                    </div>
+                </div>
+
+                <!-- System 2 -->
+                <div
+                    class="glass-panel p-10 h-[400px] flex flex-col justify-between group hover:bg-white/5 transition-all duration-500 observer-target slideUp delay-100">
+                    <div class="text-cyan-400 font-mono text-xs tracking-widest">02 // CINEMA</div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold tracking-tight mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+                            Immersive<br>Isolation</h3>
+                        <p class="text-gray-400 font-light text-sm">Acoustically engineered private theaters. 4K
+                            projection, invisible audio arrays.</p>
+                    </div>
+                </div>
+
+                <!-- System 3 -->
+                <div
+                    class="glass-panel p-10 h-[400px] flex flex-col justify-between group hover:bg-white/5 transition-all duration-500 observer-target slideUp delay-200">
+                    <div class="text-cyan-400 font-mono text-xs tracking-widest">03 // SECURITY</div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold tracking-tight mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+                            Perimeter<br>Defense</h3>
+                        <p class="text-gray-400 font-light text-sm">High-res thermal imaging, biometric access, and
+                            instantaneous localized alerts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Break -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative h-[60vh] w-full overflow-hidden observer-target blurReveal">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                    alt="Luxury Home Exterior"
+                    class="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-32 px-6 border-t border-white/5">
+        <div class="max-w-3xl mx-auto text-center observer-target slideUp">
+            <p class="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-8">Verification</p>
+            <h2 class="text-3xl md:text-5xl font-light leading-tight mb-12">"TCG completely overhauled our estate's
+                infrastructure. It's not just smart home tech, it feels like the house is alive."</h2>
+            <div class="text-sm font-bold tracking-widest uppercase text-gray-400">Marcus T. — Douglasville Custom Build
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-32 px-6 bg-[#111]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div class="observer-target blurReveal">
+                <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8">INITIATE.</h2>
+                <p class="text-gray-400 font-light text-xl mb-12">Ready to upgrade your infrastructure?<br>Send us your
+                    coordinates.</p>
+                <div class="space-y-6 text-sm font-mono tracking-wider text-gray-500">
+                    <div>> LOC: DOUGLASVILLE, GA</div>
+                    <div>> COM: (678) 545-9205</div>
+                    <div>> STAT: ONLINE // AWAITING INPUT</div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-10 observer-target slideUp delay-200">
+                <form action="https://formsubmit.co/mmmoorer@yahoo.com" method="POST" class="space-y-8">
+                    <input type="hidden" name="_subject" value="New Lead From TCG Demo Site">
+
+                    <div>
+                        <input type="text" name="name" placeholder="IDENTIFICATION (NAME)" required
+                            class="w-full bg-transparent border-b border-white/20 pb-4 text-white focus:outline-none focus:border-cyan-400 transition-colors uppercase font-mono text-sm placeholder-gray-600">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="COM LINK (EMAIL)" required
+                            class="w-full bg-transparent border-b border-white/20 pb-4 text-white focus:outline-none focus:border-cyan-400 transition-colors uppercase font-mono text-sm placeholder-gray-600">
+                    </div>
+                    <div>
+                        <textarea name="message" rows="4" placeholder="TRANSMISSION (NATURE OF PROJECT)" required
+                            class="w-full bg-transparent border-b border-white/20 pb-4 text-white focus:outline-none focus:border-cyan-400 transition-colors uppercase font-mono text-sm placeholder-gray-600 resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-cyan-400 hover:text-white transition-all">
+                        TRANSMIT
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <p class="text-gray-600 font-mono text-xs uppercase tracking-widest">© 2026 TCG Smart Homes LLC. All Systems
+            Nominal.</p>
+    </footer>
+
+    <!-- Intersection Observer for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.observer-target').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

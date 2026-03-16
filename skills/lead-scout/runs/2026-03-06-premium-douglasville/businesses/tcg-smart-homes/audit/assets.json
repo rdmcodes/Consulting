@@ -1,0 +1,44 @@
+{
+    "customer_persona": {
+        "primary_customer": "homeowners",
+        "customer_cares_about": [
+            "security",
+            "convenience",
+            "modern living",
+            "luxury home automation"
+        ],
+        "all_services": [
+            "Smart Home Automation",
+            "Home Cinema Installation",
+            "Home Security",
+            "Whole Home Audio"
+        ],
+        "service_photo_needs": {
+            "Smart Home Automation": "sleek smart home control panel on a stark wall",
+            "Home Cinema Installation": "dark, high-end private home theater with massive screen",
+            "Home Security": "modern security camera integrated seamlessly into a beautiful exterior",
+            "Whole Home Audio": "minimalist architectural speakers"
+        },
+        "imagery_perspective": "Show the sleek, high-end, finished result. Very modern, dark mode, high luxury."
+    },
+    "logo_url": "https://logo.clearbit.com/thesmarthomeco.com",
+    "logo_source": "placeholder",
+    "brand_colors": {
+        "primary": "#000000",
+        "secondary": "#111111",
+        "accent": "#06B6D4"
+    },
+    "testimonials": [],
+    "services": [
+        "Smart Home Automation",
+        "Home Cinema Installation",
+        "Security Systems"
+    ],
+    "pages_found": 0,
+    "pages_crawled": [],
+    "has_blog": false,
+    "has_gallery": false,
+    "has_contact_form": false,
+    "last_blog_post_date": null,
+    "vast_space_mode": true
+}

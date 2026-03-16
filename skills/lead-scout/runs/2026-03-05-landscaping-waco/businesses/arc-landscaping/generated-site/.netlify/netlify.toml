@@ -1,0 +1,25 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\smoor\\OneDrive\\Desktop\\PRESSUREWASHIGN\\lead-scout\\runs\\2026-03-05-landscaping-waco\\businesses\\arc-landscaping\\generated-site"
+publishOrigin = "default"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

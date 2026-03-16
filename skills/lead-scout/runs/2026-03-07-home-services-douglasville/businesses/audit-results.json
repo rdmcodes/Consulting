@@ -1,0 +1,115 @@
+[
+  {
+    "name": "YardSnaps",
+    "slug": "yardsnaps",
+    "url": "https://www.yardsnaps.com/",
+    "score": 5,
+    "website_quality": 2,
+    "review_health": 2,
+    "lead_capture": 1,
+    "mobile_score": 0,
+    "pain_points": [
+      "Built on Wix — template-based, limited customization, feels generic",
+      "No online booking/scheduling integration — just a basic contact form",
+      "No Google Reviews widget or social proof beyond 3 manually added testimonials",
+      "No clear service area page or local SEO optimization for Douglasville",
+      "Design feels dated — low-res images, inconsistent typography, all-caps text blocks",
+      "No mobile-first design cues — Wix responsive mode often breaks on smaller screens",
+      "Missing phone number CTA in sticky header for mobile users",
+      "No pricing transparency beyond vague cost ranges",
+      "No before/after project gallery — only small thumbnails"
+    ],
+    "review_stars": 5.0,
+    "review_count": 39,
+    "verdict": "Strong Lead",
+    "notes": "Wix site with basic contact form. Landscape design niche (not lawn care/maintenance). 3 testimonials manually added. Phone number visible but not sticky. Design options are well-organized but presentation is dated. Good candidate for a modern redesign."
+  },
+  {
+    "name": "Advent Lawn Care",
+    "slug": "advent-lawn-care",
+    "url": "https://www.advent1stsolution.com/",
+    "score": 3,
+    "website_quality": 1,
+    "review_health": 2,
+    "lead_capture": 0,
+    "mobile_score": 0,
+    "pain_points": [
+      "Built on UENI — extremely basic template builder, very limited functionality",
+      "Only 5 reviews shown on-site despite 135 Google Reviews — massive missed opportunity",
+      "No contact form whatsoever — 'Get a Free Estimate' button is just a tel: link",
+      "No online booking or scheduling capability",
+      "No service pages — all services mentioned in a single paragraph",
+      "No project photos or before/after gallery",
+      "No testimonials section with real customer quotes",
+      "Generic stock imagery instead of real work photos",
+      "No local SEO content — no mention of specific service areas beyond Douglasville",
+      "Accessibility overlay widget (often considered harmful for actual accessibility)",
+      "No blog, no FAQ, no educational content for SEO",
+      "Footer links to 'Merchant Policies' and 'Legal Notice' — very template-looking"
+    ],
+    "review_stars": 4.9,
+    "review_count": 135,
+    "verdict": "Build",
+    "notes": "Extremely bare-bones UENI template site. Services include mowing, mulching, cleanups, weed control, pressure washing, gutter cleaning, junk removal. 135 Google Reviews at 4.9 stars is excellent but website does zero justice to the business. No forms, no booking, no real photos. Perfect Build candidate — strong reviews, terrible web presence."
+  },
+  {
+    "name": "GrassRoots Turf",
+    "slug": "grassroots-turf",
+    "url": "https://grassrootsturf.com/douglasville-ga/",
+    "score": 9,
+    "website_quality": 3,
+    "review_health": 3,
+    "lead_capture": 2,
+    "mobile_score": 1,
+    "pain_points": [
+      "Page title is excessively keyword-stuffed — terrible for UX and looks spammy",
+      "Some content repetition across sections",
+      "Typo: 'quesitons' in FAQ heading",
+      "Very long page — could benefit from better content hierarchy"
+    ],
+    "review_stars": 4.9,
+    "review_count": 167,
+    "verdict": "Skip",
+    "notes": "Professional WordPress site with strong SEO, embedded Google Reviews widget (167 reviews at 4.9), franchise model, Weed-Free Guarantee, multiple CTAs, FAQ section, local SEO pages for surrounding cities, blog, client login portal, referral program. This is a well-run operation with a solid web presence. Not a lead — they have their act together."
+  },
+  {
+    "name": "Best Rate Landscape",
+    "slug": "best-rate-landscape",
+    "url": "http://bestratelandscape.com/",
+    "score": 1,
+    "website_quality": 0,
+    "review_health": 1,
+    "lead_capture": 0,
+    "mobile_score": 0,
+    "pain_points": [
+      "Website is completely DOWN — DNS resolution error (Cloudflare Error 1001)",
+      "Domain not resolving — either expired, misconfigured, or abandoned",
+      "HTTP only (no HTTPS) — indicates neglect even before the DNS failure",
+      "Only 14 reviews — low volume",
+      "No web presence at all currently"
+    ],
+    "review_stars": 5.0,
+    "review_count": 14,
+    "verdict": "Build",
+    "notes": "Website is completely dead — DNS resolution error. Domain appears abandoned or misconfigured. 5.0 stars but only 14 reviews. This business has zero functional web presence. Strong Build candidate if they are still operating."
+  },
+  {
+    "name": "Carter Landscaping",
+    "slug": "carter-landscaping",
+    "url": null,
+    "score": 1,
+    "website_quality": 0,
+    "review_health": 1,
+    "lead_capture": 0,
+    "mobile_score": 0,
+    "pain_points": [
+      "No website at all",
+      "Zero online presence beyond Google listing",
+      "No way for customers to learn about services, see work, or request quotes online"
+    ],
+    "review_stars": null,
+    "review_count": null,
+    "verdict": "Build",
+    "notes": "No website. Auto-score 1/10."
+  }
+]

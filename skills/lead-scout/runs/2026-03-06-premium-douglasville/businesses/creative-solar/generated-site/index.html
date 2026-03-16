@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Solar USA | Independent Power</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        solar: { 500: '#F59E0B' }, // Amber
+                        dark: '#0A0A0A'
+                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAFAFA;
+            color: #0A0A0A;
+            overflow-x: hidden;
+        }
+
+        .observer-target {
+            opacity: 0.05;
+            will-change: opacity, transform, filter;
+        }
+
+        .blurReveal {
+            filter: blur(10px);
+            transform: translateY(20px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .blurReveal.is-visible {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .slideUp {
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slideUp.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        /* Light Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Text gradient for light mode */
+        .text-gradient {
+            background: linear-gradient(135deg, #0A0A0A 0%, #4B5563 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-solar-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-black/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
+            <div class="text-2xl font-black tracking-tighter uppercase">Creative<br>Solar<span
+                    class="text-solar-500">.</span></div>
+            <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase">
+                <a href="#systems" class="text-gray-500 hover:text-black transition-colors">Energy Systems</a>
+                <a href="#independence" class="text-gray-500 hover:text-black transition-colors">Independence</a>
+                <a href="#contact" class="text-gray-500 hover:text-black transition-colors">Consultation</a>
+            </div>
+            <a href="tel:7704857438"
+                class="px-8 py-4 bg-dark text-white text-xs uppercase tracking-[0.2em] font-bold hover:bg-solar-500 transition-colors">
+                (770) 485-7438
+            </a>
+        </div>
+    </nav>
+
+    <!-- Super Premium Hero / Bright -->
+    <section class="relative min-h-[95vh] flex flex-col justify-end pb-24 px-6 overflow-hidden bg-white">
+        <div class="absolute inset-0 z-0">
+            <!-- Bright, sunny aesthetic -->
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2072" alt="Solar Home"
+                class="object-cover w-full h-full opacity-30 transform origin-center transition-transform duration-[20s] ease-out hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA]/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto w-full pt-48 flex justify-between items-end">
+            <div class="max-w-4xl">
+                <p
+                    class="text-solar-500 font-mono text-xs tracking-[0.3em] uppercase mb-8 observer-target blurReveal font-bold">
+                    Georgia's Energy Standard</p>
+                <h1
+                    class="text-6xl md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-8 observer-target blurReveal delay-100 uppercase text-gradient">
+                    Absolute<br>
+                    Power.
+                </h1>
+                <p
+                    class="text-gray-600 font-medium text-xl md:text-2xl mb-12 leading-relaxed observer-target slideUp delay-200 max-w-2xl">
+                    We engineer enterprise-grade solar architecture for premium residential estates. Generate your own
+                    energy. Isolate from the grid.
+                </p>
+                <div class="flex gap-4 observer-target slideUp delay-300">
+                    <a href="#contact"
+                        class="px-12 py-5 bg-solar-500 text-white text-xs uppercase tracking-[0.2em] font-black hover:bg-dark transition-colors text-center shadow-xl shadow-solar-500/20">
+                        Design My System
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid (Light Mode) -->
+    <section id="systems" class="py-32 px-6 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2
+                class="text-4xl md:text-5xl font-black tracking-tighter mb-20 observer-target blurReveal uppercase text-gradient">
+                Infrastructure<br>Upgrades.</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                <!-- Main Focus -->
+                <div
+                    class="md:col-span-8 glass-panel p-12 h-[600px] flex flex-col justify-end relative overflow-hidden group observer-target slideUp rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1584279313271-e222ab655b38?q=80&w=2069"
+                        class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 group-hover:scale-105 transition-all duration-1000 -z-10">
+                    <div class="relative z-10">
+                        <div class="text-solar-500 font-bold text-xs tracking-[0.2em] mb-4 uppercase">01 / Generation
+                        </div>
+                        <h3 class="text-5xl font-black tracking-tighter mb-4 text-dark">Monocrystalline<br>Arrays.</h3>
+                        <p class="text-gray-600 font-medium text-lg max-w-md">Ultra-high-efficiency, stealth-profile
+                            panels that integrate seamlessly into your estate's roofline without compromising
+                            aesthetics.</p>
+                    </div>
+                </div>
+
+                <!-- Secondary 1 -->
+                <div
+                    class="md:col-span-4 glass-panel p-10 h-[600px] flex flex-col justify-between group observer-target slideUp delay-100 rounded-3xl">
+                    <div class="text-solar-500 font-bold text-xs tracking-[0.2em] uppercase">02 / Storage</div>
+                    <div>
+                        <h3 class="text-3xl font-black tracking-tight mb-4 text-dark">Battery<br>Vaults.</h3>
+                        <p class="text-gray-600 font-medium text-sm">Industrial lithium-ion home backup. When the
+                            neighborhood goes dark, your estate doesn't blink.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Typography Section -->
+    <section id="independence" class="py-32 px-6 bg-white border-y border-black/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-solar-500 font-bold text-xs tracking-widest uppercase mb-8 observer-target blurReveal">The
+                Return on Investment</p>
+            <h2
+                class="text-4xl md:text-6xl font-black tracking-tighter mb-12 observer-target slideUp delay-100 leading-tight text-gradient">
+                Stop Renting Your Power.
+            </h2>
+            <p class="text-gray-500 text-xl font-medium leading-relaxed mb-12 observer-target slideUp delay-200">
+                A premium solar array is not an expense—it is a wealth-building asset. By producing your own power, you
+                immediately isolate your household from escalating utility rates and drastically increase the valuation
+                of your real estate.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 text-left observer-target slideUp delay-300">
+                <div class="p-8 glass-panel rounded-2xl">
+                    <h4 class="text-2xl font-black mb-2">0%</h4>
+                    <p class="text-gray-600 text-sm font-medium">Reliance on the fragile local power grid during peak
+                        outages.</p>
+                </div>
+                <div class="p-8 glass-panel rounded-2xl border-solar-500/20 shadow-xl shadow-solar-500/5">
+                    <h4 class="text-2xl font-black mb-2 text-solar-500">26%</h4>
+                    <p class="text-gray-600 text-sm font-medium">Immediate federal tax credits applied to your total
+                        system cost.</p>
+                </div>
+                <div class="p-8 glass-panel rounded-2xl">
+                    <h4 class="text-2xl font-black mb-2">$0</h4>
+                    <p class="text-gray-600 text-sm font-medium">Expected electric bills starting on day one of
+                        activation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Contact Form -->
+    <section id="contact" class="py-32 px-6 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
+            <div class="flex-1 observer-target blurReveal">
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 max-w-lg leading-none text-gradient">
+                    TAKE<br>CONTROL.</h2>
+                <div class="space-y-4 text-sm font-bold tracking-widest text-gray-500 mt-12 uppercase">
+                    <div>> Dispatch: (770) 485-7438</div>
+                    <div>> Operational in: Douglasville, GA</div>
+                </div>
+            </div>
+
+            <div class="flex-1 glass-panel p-12 observer-target slideUp delay-200 rounded-3xl">
+                <form action="https://formsubmit.co/mmmoorer@yahoo.com" method="POST" class="space-y-10">
+                    <input type="hidden" name="_subject" value="New Lead From Creative Solar Demo">
+
+                    <div>
+                        <input type="text" name="name" placeholder="YOUR NAME" required
+                            class="w-full bg-transparent border-b-2 border-gray-200 pb-4 text-dark focus:outline-none focus:border-solar-500 transition-colors uppercase font-bold text-xs tracking-widest placeholder-gray-400">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="EMAIL ADDRESS" required
+                            class="w-full bg-transparent border-b-2 border-gray-200 pb-4 text-dark focus:outline-none focus:border-solar-500 transition-colors uppercase font-bold text-xs tracking-widest placeholder-gray-400">
+                    </div>
+                    <div>
+                        <input type="text" name="address" placeholder="PROPERTY ADDRESS" required
+                            class="w-full bg-transparent border-b-2 border-gray-200 pb-4 text-dark focus:outline-none focus:border-solar-500 transition-colors uppercase font-bold text-xs tracking-widest placeholder-gray-400">
+                    </div>
+                    <button type="submit"
+                        class="w-full py-6 bg-dark text-white font-black uppercase tracking-[0.2em] text-xs hover:bg-solar-500 transition-all rounded-xl shadow-2xl">
+                        Request System Blueprint
+                    </button>
+                    <p class="text-center text-xs text-gray-400 font-medium mt-4">Zero commitment. 100% confidential
+                        quoting.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-black/5 text-center bg-white">
+        <p class="text-gray-400 font-bold text-xs uppercase tracking-[0.2em]">© 2026 Creative Solar USA. Power
+            Independent.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.observer-target').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

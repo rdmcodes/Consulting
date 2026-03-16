@@ -1,0 +1,39 @@
+{
+    "customer_persona": {
+        "primary_customer": "homeowners",
+        "customer_cares_about": [
+            "curb appeal",
+            "luxury outdoor living",
+            "meticulous design"
+        ],
+        "all_services": [
+            "Landscape Installation",
+            "Hardscaping",
+            "Lawn Care"
+        ],
+        "service_photo_needs": {
+            "Landscape Installation": "perfectly manicured, modern exterior",
+            "Hardscaping": "sleek, geometric stone work",
+            "Lawn Care": "high contrast, perfectly striped luxurious lawn"
+        },
+        "imagery_perspective": "Show the highly manicured, architectural, and luxury result."
+    },
+    "logo_url": "https://logo.clearbit.com/placeholder-mani.com",
+    "logo_source": "placeholder",
+    "brand_colors": {
+        "primary": "#050505",
+        "secondary": "#111111",
+        "accent": "#10B981"
+    },
+    "testimonials": [],
+    "services": [
+        "Landscape Design",
+        "Hardscaping"
+    ],
+    "pages_found": 0,
+    "pages_crawled": [],
+    "has_blog": false,
+    "has_gallery": false,
+    "has_contact_form": false,
+    "vast_space_mode": true
+}

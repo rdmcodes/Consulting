@@ -1,0 +1,40 @@
+{
+    "customer_persona": {
+        "primary_customer": "homeowners",
+        "customer_cares_about": [
+            "curb appeal",
+            "luxury outdoor living",
+            "meticulous design"
+        ],
+        "all_services": [
+            "High-End Landscape Architecture",
+            "Custom Pools",
+            "Outdoor Living Spaces"
+        ],
+        "service_photo_needs": {
+            "High-End Landscape Architecture": "perfectly manicured, modern, high-end estate lawn",
+            "Custom Pools": "sleek, modern infinity pool at dusk",
+            "Outdoor Living Spaces": "dramatic architectural outdoor kitchen and patio"
+        },
+        "imagery_perspective": "Show the highly manicured, architectural, and luxury result."
+    },
+    "logo_url": "https://logo.clearbit.com/placeholder-luxury.com",
+    "logo_source": "placeholder",
+    "brand_colors": {
+        "primary": "#050505",
+        "secondary": "#111111",
+        "accent": "#D4AF37"
+    },
+    "testimonials": [],
+    "services": [
+        "Landscape Architecture",
+        "Custom Pools",
+        "Outdoor Living"
+    ],
+    "pages_found": 0,
+    "pages_crawled": [],
+    "has_blog": false,
+    "has_gallery": false,
+    "has_contact_form": false,
+    "vast_space_mode": true
+}
