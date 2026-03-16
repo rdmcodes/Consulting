@@ -1,0 +1,8 @@
+# Implementation plans with potential secrets
+2026-03-05-lead-scout-impl.md
+
+# Environment and secrets
+.env
+.env.*
+*.key
+credentials.json
